@@ -1,0 +1,81 @@
+@font-face {
+  font-family: "Garamond";
+  src: url("../resource/fonts/Garamond.ttf"); }
+@font-face {
+  font-family: "Adam.CG";
+  src: url("../resource/fonts/ADAM.CG PRO.otf"); }
+h1 {
+  font-family: 'Lobster', Georgia, Times, serif;
+  font-size: 2.5em;
+  color: #03d1ff;
+  line-height: 100px; }
+
+h2 {
+  font-family: "Adam.CG"; }
+
+h3 {
+  font-family: "Garamond"; }
+
+* {
+  font-family: 'Cabin', Helvetica, Arial, sans-serif;
+  line-height: 25px; }
+
+section:nth-child(even) {
+  background-color: #479099; }
+  section:nth-child(even) * {
+    color: white; }
+
+section:nth-child(n+3) .hero-body {
+  padding-top: 10px; }
+
+#workingXP h3 {
+  font-size: 1.5em; }
+#workingXP span.skill {
+  background-color: #03d1ff;
+  color: white;
+  padding: 5px;
+  border-radius: 4px; }
+#workingXP p {
+  line-height: 2; }
+  #workingXP p.season {
+    color: #89ecf9;
+    font-size: .8em; }
+  #workingXP p.responsibilities {
+    color: #03d1ff; }
+
+.container {
+  padding-left: 10%;
+  padding-right: 10%; }
+  @media (max-width: 768px) {
+    .container #imagePP {
+      display: none; } }
+  .container figure.image {
+    float: right; }
+    .container figure.image img {
+      border-radius: 100px;
+      box-sizing: content-box;
+      border: 3px solid #3e787c; }
+  .container .content h2 {
+    text-transform: uppercase; }
+  .container .content h3 {
+    margin-top: 0; }
+  .container .content p {
+    margin: 0; }
+
+nav.navbar {
+  background-color: #3e787c;
+  padding-left: 5%;
+  padding-right: 5%; }
+  nav.navbar .white-nav {
+    color: #03d1ff; }
+  nav.navbar img {
+    border-radius: 50px; }
+  nav.navbar .navbar-brand h1 {
+    text-shadow: 0 0 7px black;
+    color: white;
+    font-size: 2em; }
+  nav.navbar .navbar-end a {
+    background-color: #3e787c;
+    margin-left: 10px; }
+
+/*# sourceMappingURL=custom.css.map */

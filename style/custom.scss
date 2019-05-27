@@ -1,0 +1,144 @@
+$navbar-bg-color: #3e787c;
+$primary-color: #03d1ff;
+$section-color: #479099;
+$secondary-color: #89ecf9;
+
+@font-face {
+  font-family: "Garamond";
+  src: url("../resource/fonts/Garamond.ttf");
+}
+
+@font-face {
+  font-family: "Adam.CG";
+  src: url("../resource/fonts/ADAM.CG PRO.otf");
+}
+
+h1 {
+  font-family: 'Lobster', Georgia, Times, serif;
+  font-size: 2.5em;
+  color: $primary-color;
+  line-height: 100px;
+}
+
+h2 {
+  font-family: "Adam.CG";
+}
+
+h3 {
+  font-family: "Garamond";
+}
+
+* {
+  font-family: 'Cabin', Helvetica, Arial, sans-serif;
+  line-height: 25px;
+}
+
+
+section:nth-child(even) {
+  * {
+    color: white;
+  }
+
+  background-color: $section-color;
+}
+
+section:nth-child(n+3) {
+  .hero-body {
+    padding-top: 10px;
+  }
+}
+
+#workingXP {
+  h3 {
+    font-size: 1.5em;
+  }
+
+  span{
+    &.skill{
+      background-color: $primary-color;
+      color: white;
+      padding: 5px;
+      border-radius: 4px;
+    }
+  }
+
+  p{
+    line-height: 2;
+    &.season{
+      color: $secondary-color;
+      font-size: .8em;
+    }
+    &.responsibilities{
+      color:$primary-color;
+    }
+  }
+}
+
+.container {
+  padding-left: 10%;
+  padding-right: 10%;
+
+  @media (max-width: 768px) {
+    #imagePP {
+      display: none;
+    }
+  }
+
+  figure {
+    &.image {
+      float: right;
+
+      img {
+        border-radius: 100px;
+        box-sizing: content-box;
+        border: 3px solid $navbar-bg-color;
+      }
+    }
+  }
+
+  .content {
+    h2 {
+      text-transform: uppercase;
+    }
+
+    h3 {
+      margin-top: 0;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+}
+
+
+nav {
+  &.navbar {
+    background-color: $navbar-bg-color;
+    padding-left: 5%;
+    padding-right: 5%;
+
+    .white-nav {
+      color: $primary-color;
+    }
+
+    img {
+      border-radius: 50px;
+    }
+
+    .navbar-brand {
+      h1 {
+        text-shadow: 0 0 7px black;
+        color: white;
+        font-size: 2em;
+      }
+    }
+
+    .navbar-end {
+      a {
+        background-color: $navbar-bg-color;
+        margin-left: 10px;
+      }
+    }
+  }
+}
