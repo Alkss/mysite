@@ -4,6 +4,8 @@ $(document).ready(function () {
                 scrollTop: $("#workingXP").offset().top-50
             },
             'slow');
+        $(".navbar-burger").toggleClass("is-active");
+        $(".navbar-menu").toggleClass("is-active");
     });
 
     $("#skillBtn").click(function () {
@@ -11,6 +13,8 @@ $(document).ready(function () {
                 scrollTop: $("#skills").offset().top-50
             },
             'slow');
+        $(".navbar-burger").toggleClass("is-active");
+        $(".navbar-menu").toggleClass("is-active");
     });
 
     $("#languagesBtn").click(function () {
@@ -18,6 +22,8 @@ $(document).ready(function () {
                 scrollTop: $("#languages").offset().top-50
             },
             'slow');
+        $(".navbar-burger").toggleClass("is-active");
+        $(".navbar-menu").toggleClass("is-active");
     });
 
 
