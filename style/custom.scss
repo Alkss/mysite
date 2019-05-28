@@ -53,8 +53,8 @@ section:nth-child(n+3) {
     font-size: 1.5em;
   }
 
-  span{
-    &.skill{
+  span {
+    &.skill {
       background-color: $primary-color;
       color: white;
       padding: 5px;
@@ -62,14 +62,31 @@ section:nth-child(n+3) {
     }
   }
 
-  p{
+  p {
     line-height: 2;
-    &.season{
+
+    &.season {
       color: $secondary-color;
       font-size: .8em;
     }
-    &.responsibilities{
-      color:$primary-color;
+
+    &.responsibilities {
+      color: $primary-color;
+    }
+  }
+}
+
+#education {
+  p {
+    line-height: 2;
+
+    &.season {
+      color: $secondary-color;
+      font-size: .8em;
+    }
+
+    &.responsibilities {
+      color: $primary-color;
     }
   }
 }
@@ -101,6 +118,14 @@ section:nth-child(n+3) {
       text-transform: uppercase;
     }
 
+    ul {
+      margin-top: 0;
+
+      li {
+        text-transform: capitalize;
+      }
+    }
+
     h3 {
       margin-top: 0;
     }
@@ -123,7 +148,7 @@ nav {
     }
 
     img {
-      border-radius: 50px;
+      border-radius: 10px;
     }
 
     .navbar-brand {
@@ -142,3 +167,17 @@ nav {
     }
   }
 }
+
+#topBtn {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  padding: 2px;
+  z-index: 2;
+
+  button {
+    border-radius: 40%;
+  }
+}
+
+

@@ -43,6 +43,14 @@ section:nth-child(n+3) .hero-body {
   #workingXP p.responsibilities {
     color: #03d1ff; }
 
+#education p {
+  line-height: 2; }
+  #education p.season {
+    color: #89ecf9;
+    font-size: .8em; }
+  #education p.responsibilities {
+    color: #03d1ff; }
+
 .container {
   padding-left: 10%;
   padding-right: 10%; }
@@ -57,6 +65,10 @@ section:nth-child(n+3) .hero-body {
       border: 3px solid #3e787c; }
   .container .content h2 {
     text-transform: uppercase; }
+  .container .content ul {
+    margin-top: 0; }
+    .container .content ul li {
+      text-transform: capitalize; }
   .container .content h3 {
     margin-top: 0; }
   .container .content p {
@@ -69,7 +81,7 @@ nav.navbar {
   nav.navbar .white-nav {
     color: #03d1ff; }
   nav.navbar img {
-    border-radius: 50px; }
+    border-radius: 10px; }
   nav.navbar .navbar-brand h1 {
     text-shadow: 0 0 7px black;
     color: white;
@@ -77,5 +89,14 @@ nav.navbar {
   nav.navbar .navbar-end a {
     background-color: #3e787c;
     margin-left: 10px; }
+
+#topBtn {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  padding: 2px;
+  z-index: 2; }
+  #topBtn button {
+    border-radius: 40%; }
 
 /*# sourceMappingURL=custom.css.map */
