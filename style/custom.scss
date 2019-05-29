@@ -137,6 +137,15 @@ section:nth-child(n+3) {
 }
 
 
+.modal{
+  .modal-content{
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    min-width: 70%;
+  }
+}
+
 nav {
   &.navbar {
     background-color: $navbar-bg-color;

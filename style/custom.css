@@ -74,6 +74,12 @@ section:nth-child(n+3) .hero-body {
   .container .content p {
     margin: 0; }
 
+.modal .modal-content {
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  min-width: 70%; }
+
 nav.navbar {
   background-color: #3e787c;
   padding-left: 5%;

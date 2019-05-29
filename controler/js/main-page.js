@@ -20,15 +20,27 @@ $(document).ready(function () {
     });
 
     $("#projectsBtn").click(function () {
-        //TODO: Implement modal
+        $("#project-modal").addClass('is-active');
+        $("#html").addClass('is-clipped');
     });
 
     $("#contactBtn").click(function () {
-        //TODO: Implement modal
+        $("#contact-modal").addClass('is-active');
+        $("#html").addClass('is-clipped');
     });
 
     $("#aboutBtn").click(function () {
-        //TODO: Implement modal
+        $("#about-modal").addClass('is-active');
+        $("#html").addClass('is-clipped');
+    });
+
+    $(".modal-background").click(function () {
+       $(".modal").removeClass('is-active');
+        $("#html").removeClass('is-clipped');
+    });
+    $(".modal-close").click(function () {
+       $(".modal").removeClass('is-active');
+       $("#html").removeClass('is-clipped');
     });
 
 });
