@@ -1,7 +1,67 @@
 <div class="modal" id="contact-modal">
     <div class="modal-background"></div>
     <div class="modal-content">
-        contact
+        <div class="field">
+            <div class="field">
+                <label class="label">Name</label>
+                <div class="control has-icons-left has-icons-right">
+                    <input class="input" type="text" id="name" placeholder="Name input">
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-font"></i>
+                    </span>
+                    <div class="name-alert" style="display: none;">
+                        <span class="icon is-small is-right">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </span>
+                    </div>
+                    <div class="name-success" style="display: none;">
+                        <span class="icon is-small is-right">
+                            <i class="fas fa-check"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="name-alert" style="display: none;">
+                    <p class="help is-danger">The name field must be filled</p>
+                </div>
+            </div>
+
+            <label class="label">Email</label>
+            <div class="control has-icons-left has-icons-right">
+                <input class="input" type="email" id="email" placeholder="Email input">
+                <span class="icon is-small is-left">
+                    <i class="fas fa-envelope"></i>
+                </span>
+                <div class="email-alert" style="display: none;">
+                    <span class="icon is-small is-right">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </span>
+                </div>
+                <div class="email-success" style="display: none;">
+                    <span class="icon is-small is-right">
+                        <i class="fas fa-check"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="email-alert" style="display: none;">
+                <p class="help is-danger">This email is invalid</p>
+            </div>
+        </div>
+
+        <div class="field">
+            <label class="label">Message</label>
+            <div class="control">
+                <textarea id="message" class="textarea" placeholder="Textarea"></textarea>
+            </div>
+            <div class="message-alert" style="display: none;">
+                <p class="help is-danger">Please fill in the message box</p>
+            </div>
+        </div>
+
+        <div class="field">
+            <div class="control">
+                <button class="button is-info" id="submitBtn">Submit</button>
+            </div>
+        </div>
     </div>
     <button class="modal-close is-large" aria-label="close"></button>
 </div>

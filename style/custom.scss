@@ -106,6 +106,7 @@ section:nth-child(n+3) {
       float: right;
 
       img {
+        box-shadow: 0 0 15px black;
         border-radius: 100px;
         box-sizing: content-box;
         border: 3px solid $navbar-bg-color;
@@ -136,9 +137,23 @@ section:nth-child(n+3) {
   }
 }
 
+.skills-parallax {
+  /* The image used */
+  background:linear-gradient(0deg, rgba(41, 99, 112, 0.61), rgba(1, 97, 122, 0.71)),url('../images/skills-background.jpg');
 
-.modal{
-  .modal-content{
+
+  /* Full height */
+  height: 100%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.modal {
+  .modal-content {
     background-color: white;
     padding: 40px;
     border-radius: 10px;
