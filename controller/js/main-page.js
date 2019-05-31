@@ -25,16 +25,19 @@ $(document).ready(function () {
     $("#projectsBtn").click(function () {
         $("#project-modal").addClass('is-active');
         $("#html").addClass('is-clipped');
+        dismissNavBurger();
     });
 
     $("#contactBtn").click(function () {
         $("#contact-modal").addClass('is-active');
         $("#html").addClass('is-clipped');
+        dismissNavBurger();
     });
 
     $("#aboutBtn").click(function () {
         $("#about-modal").addClass('is-active');
         $("#html").addClass('is-clipped');
+        dismissNavBurger();
     });
 
     $(".modal-background").click(function () {
@@ -123,13 +126,13 @@ $(document).ready(function () {
                         $("#message").removeClass('is-success');
                     }, 500);
                     setTimeout(function () {
-                       $("#submitBtn").removeClass('is-loading');
+                        $("#submitBtn").removeClass('is-loading');
                     }, 1000);
 
-                    if (returnedData === "Message has been sent"){
+                    if (returnedData === "Message has been sent") {
                         $("#emailConfirmation").removeClass('is-danger');
                         $("#emailConfirmation").addClass('is-success');
-                    }else{
+                    } else {
                         $("#emailConfirmation").removeClass('is-success');
                         $("#emailConfirmation").addClass('is-danger');
                     }
@@ -176,10 +179,9 @@ function dismissModal() {
 
 }
 
-function showNotificationModal() {
-    setTimeout(function () {
-
-    });
+function dismissNavBurger() {
+    $(".navbar-burger").toggleClass("is-active");
+    $(".navbar-menu").toggleClass("is-active");
 }
 
 function validateEmail($email) {
@@ -192,9 +194,7 @@ function workingBtn() {
             scrollTop: $("#workingXP").offset().top - 50
         },
         'slow');
-    $(".navbar-burger").toggleClass("is-active");
-    $(".navbar-menu").toggleClass("is-active");
-
+    dismissNavBurger();
 }
 
 function scrollTopBtn() {
@@ -202,6 +202,7 @@ function scrollTopBtn() {
             scrollTop: $("#perfil").offset().top - 50
         },
         'slow');
+    dismissNavBurger();
 }
 
 function skillBtn() {
@@ -209,9 +210,7 @@ function skillBtn() {
             scrollTop: $("#skills").offset().top - 50
         },
         'slow');
-    $(".navbar-burger").toggleClass("is-active");
-    $(".navbar-menu").toggleClass("is-active");
-
+    dismissNavBurger();
 }
 
 function languagesBtn() {
@@ -219,9 +218,7 @@ function languagesBtn() {
             scrollTop: $("#languages").offset().top - 50
         },
         'slow');
-    $(".navbar-burger").toggleClass("is-active");
-    $(".navbar-menu").toggleClass("is-active");
-
+    dismissNavBurger();
 }
 
 function educationBtn() {
@@ -229,6 +226,5 @@ function educationBtn() {
             scrollTop: $("#education").offset().top - 50
         },
         'slow');
-    $(".navbar-burger").toggleClass("is-active");
-    $(".navbar-menu").toggleClass("is-active");
+    dismissNavBurger();
 }

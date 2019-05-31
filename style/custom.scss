@@ -184,6 +184,9 @@ nav {
     background-color: $navbar-bg-color;
     padding-left: 5%;
     padding-right: 5%;
+    @media (max-width: 768px) {
+      padding-bottom: 5%;
+    }
 
     .white-nav {
       color: $primary-color;
@@ -218,7 +221,6 @@ nav {
   @media (max-width: 768px) {
     left: 0;
   }
-  cursor: pointer;
 }
 
 #topBtn {
