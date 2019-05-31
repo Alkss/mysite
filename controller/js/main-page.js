@@ -103,15 +103,54 @@ $(document).ready(function () {
     $("#submitBtn").click(function () {
         if (isEmailValid && isNameValid && isMessageValid) {
             //post to email
-            setTimeout(function () {
-                dismissModal();
-                $("#name").val("");
-                $("#email").val("");
-                $("#message").val("");
-                $("#name").removeClass('is-success');
-                $("#email").removeClass('is-success');
-                $("#message").removeClass('is-success');
-            }, 500);
+            $("#submitBtn").addClass('is-loading');
+            var name, email, message;
+            name = $("#name").val();
+            email = $("#email").val();
+            message = $("#message").val();
+            $.ajax({
+                url: '../controller/mail.php',
+                type: 'POST',
+                data: {'name': name, 'email': email, 'message': message},
+                success: function (returnedData) {
+                    setTimeout(function () {
+                        dismissModal();
+                        $("#name").val("");
+                        $("#email").val("");
+                        $("#message").val("");
+                        $("#name").removeClass('is-success');
+                        $("#email").removeClass('is-success');
+                        $("#message").removeClass('is-success');
+                    }, 500);
+                    setTimeout(function () {
+                       $("#submitBtn").removeClass('is-loading');
+                    }, 1000);
+
+                    if (returnedData === "Message has been sent"){
+                        $("#emailConfirmation").removeClass('is-danger');
+                        $("#emailConfirmation").addClass('is-success');
+                    }else{
+                        $("#emailConfirmation").removeClass('is-success');
+                        $("#emailConfirmation").addClass('is-danger');
+                    }
+                    $("#emailConfirmation").html(returnedData);
+                    setTimeout(function () {
+                        $("#emailConfirmation").show();
+                        $("#emailConfirmation").addClass('slideInRight');
+                    }, 1000);
+
+                    setTimeout(function () {
+                        $("#emailConfirmation").addClass('slideOutRight');
+                    }, 5000);
+                    setTimeout(function () {
+                        $("#emailConfirmation").hide();
+                        $("#emailConfirmation").removeClass('slideOutRight');
+                        $("#emailConfirmation").addClass('slideInRight');
+                    }, 6000);
+                }
+            });
+
+
         } else if (!(isNameValid)) {
             $("#name").focus();
         } else if (!(isEmailValid)) {
@@ -119,20 +158,6 @@ $(document).ready(function () {
         } else {
             $("#message").focus();
         }
-
-        setTimeout(function () {
-            $("#emailConfirmation").show();
-            $("#emailConfirmation").addClass('slideInRight');
-        }, 1000);
-
-        setTimeout(function () {
-            $("#emailConfirmation").addClass('slideOutRight');
-        }, 5000);
-        setTimeout(function () {
-            $("#emailConfirmation").hide();
-            $("#emailConfirmation").removeClass('slideOutRight');
-            $("#emailConfirmation").addClass('slideInRight');
-        }, 6000);
     });
 
 });
