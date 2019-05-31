@@ -38,12 +38,10 @@ $(document).ready(function () {
     });
 
     $(".modal-background").click(function () {
-        $(".modal").removeClass('is-active');
-        $("#html").removeClass('is-clipped');
+        dismissModal();
     });
     $(".modal-close").click(function () {
-        $(".modal").removeClass('is-active');
-        $("#html").removeClass('is-clipped');
+        dismissModal();
     });
 
     $("#name").focusout(function () {
@@ -105,7 +103,15 @@ $(document).ready(function () {
     $("#submitBtn").click(function () {
         if (isEmailValid && isNameValid && isMessageValid) {
             //post to email
-            alert('hit');
+            setTimeout(function () {
+                dismissModal();
+                $("#name").val("");
+                $("#email").val("");
+                $("#message").val("");
+                $("#name").removeClass('is-success');
+                $("#email").removeClass('is-success');
+                $("#message").removeClass('is-success');
+            }, 500);
         } else if (!(isNameValid)) {
             $("#name").focus();
         } else if (!(isEmailValid)) {
@@ -113,9 +119,43 @@ $(document).ready(function () {
         } else {
             $("#message").focus();
         }
+
+        setTimeout(function () {
+            $("#emailConfirmation").show();
+            $("#emailConfirmation").addClass('slideInRight');
+        }, 1000);
+
+        setTimeout(function () {
+            $("#emailConfirmation").addClass('slideOutRight');
+        }, 5000);
+        setTimeout(function () {
+            $("#emailConfirmation").hide();
+            $("#emailConfirmation").removeClass('slideOutRight');
+            $("#emailConfirmation").addClass('slideInRight');
+        }, 6000);
     });
 
 });
+
+function dismissModal() {
+    $(".modal").removeClass('fadeIn');
+    $(".modal").addClass('fadeOut');
+    setTimeout(function () {
+        $(".modal").removeClass('is-active');
+        $("#html").removeClass('is-clipped');
+    }, 1000);
+    setTimeout(function () {
+        $(".modal").removeClass('fadeOut');
+        $(".modal").addClass('fadeIn');
+    }, 1000);
+
+}
+
+function showNotificationModal() {
+    setTimeout(function () {
+
+    });
+}
 
 function validateEmail($email) {
     var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;

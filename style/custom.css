@@ -28,6 +28,9 @@ section:nth-child(even) {
 section:nth-child(n+3) .hero-body {
   padding-top: 10px; }
 
+#perfil, #skills {
+  text-shadow: 1px 1px 5px black; }
+
 #workingXP h3 {
   font-size: 1.5em; }
 #workingXP span.skill {
@@ -86,11 +89,23 @@ section:nth-child(n+3) .hero-body {
   background-repeat: no-repeat;
   background-size: cover; }
 
+.modal .modal-header {
+  background-color: #479099;
+  color: white;
+  padding-left: 30px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  max-width: 70%;
+  min-width: 70%;
+  z-index: 1;
+  text-shadow: 1px 1px 15px #000; }
 .modal .modal-content {
   background-color: white;
   padding: 40px;
-  border-radius: 10px;
-  min-width: 70%; }
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  min-width: 70%;
+  max-width: 70%; }
 
 nav.navbar {
   background-color: #3e787c;
@@ -107,6 +122,16 @@ nav.navbar {
   nav.navbar .navbar-end a {
     background-color: #3e787c;
     margin-left: 10px; }
+
+.notification {
+  position: fixed;
+  top: 4rem;
+  right: 0;
+  left: 70%;
+  cursor: pointer; }
+  @media (max-width: 768px) {
+    .notification {
+      left: 0; } }
 
 #topBtn {
   position: fixed;
