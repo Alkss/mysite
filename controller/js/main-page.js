@@ -43,6 +43,7 @@ $(document).ready(function () {
     $(".modal-background").click(function () {
         dismissModal();
     });
+
     $(".modal-close").click(function () {
         dismissModal();
     });
@@ -160,6 +161,26 @@ $(document).ready(function () {
             $("#email").focus();
         } else {
             $("#message").focus();
+        }
+    });
+
+    $("#private-project-li").click(function () {
+        if (!($(this).hasClass('is-active'))) {
+            $("#public-project-li").removeClass('is-active');
+            $("#private-project-li").addClass('is-active');
+
+            $("#public-projects").toggle();
+            $("#private-projects").toggle();
+        }
+    });
+
+    $("#public-project-li").click(function () {
+        if (!($(this).hasClass('is-active'))) {
+            $("#private-project-li").removeClass('is-active');
+            $("#public-project-li").addClass('is-active');
+
+            $("#public-projects").toggle();
+            $("#private-projects").toggle();
         }
     });
 

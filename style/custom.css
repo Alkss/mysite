@@ -7,7 +7,7 @@
 h1 {
   font-family: 'Lobster', Georgia, Times, serif;
   font-size: 2.5em;
-  color: #03d1ff;
+  color: #1063ff;
   line-height: 100px; }
 
 h2 {
@@ -31,28 +31,44 @@ section:nth-child(n+3) .hero-body {
 #perfil, #skills {
   text-shadow: 1px 1px 5px black; }
 
-#workingXP h3 {
-  font-size: 1.5em; }
-#workingXP span.skill {
-  background-color: #03d1ff;
+span.skill {
+  background-color: #1063ff;
   color: white;
   padding: 5px;
   border-radius: 4px; }
+
+#workingXP h3 {
+  font-size: 1.5em; }
 #workingXP p {
   line-height: 2; }
   #workingXP p.season {
-    color: #89ecf9;
+    color: #769bff;
     font-size: .8em; }
   #workingXP p.responsibilities {
-    color: #03d1ff; }
+    color: #1063ff; }
+
+.margin-top-15 {
+  margin-top: 15px; }
+
+.line-height-2 {
+  line-height: 2; }
+
+#project-modal h2 {
+  margin-bottom: 5px; }
+#project-modal h3 {
+  font-size: 1.5em; }
+#project-modal .bordered {
+  margin: 5px; }
+  #project-modal .bordered:hover {
+    box-shadow: 0 0 15px black; }
 
 #education p {
   line-height: 2; }
   #education p.season {
-    color: #89ecf9;
+    color: #769bff;
     font-size: .8em; }
   #education p.responsibilities {
-    color: #03d1ff; }
+    color: #1063ff; }
 
 .container {
   padding-left: 10%;
@@ -99,6 +115,8 @@ section:nth-child(n+3) .hero-body {
   min-width: 70%;
   z-index: 1;
   text-shadow: 1px 1px 15px #000; }
+  .modal .modal-header h1 {
+    color: white; }
 .modal .modal-content {
   background-color: white;
   padding: 40px;
@@ -115,7 +133,8 @@ nav.navbar {
     nav.navbar {
       padding-bottom: 5%; } }
   nav.navbar .white-nav {
-    color: #03d1ff; }
+    color: white;
+    text-shadow: 0 0 3px black; }
   nav.navbar img {
     border-radius: 10px; }
   nav.navbar .navbar-brand h1 {

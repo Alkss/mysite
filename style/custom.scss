@@ -1,7 +1,7 @@
 $navbar-bg-color: #3e787c;
-$primary-color: #03d1ff;
+$primary-color: #1063ff;
 $section-color: #479099;
-$secondary-color: #89ecf9;
+$secondary-color: #769bff;
 
 @font-face {
   font-family: "Garamond";
@@ -52,18 +52,18 @@ section:nth-child(n+3) {
   text-shadow: 1px 1px 5px black;
 }
 
+span {
+  &.skill {
+    background-color: $primary-color;
+    color: white;
+    padding: 5px;
+    border-radius: 4px;
+  }
+}
+
 #workingXP {
   h3 {
     font-size: 1.5em;
-  }
-
-  span {
-    &.skill {
-      background-color: $primary-color;
-      color: white;
-      padding: 5px;
-      border-radius: 4px;
-    }
   }
 
   p {
@@ -76,6 +76,32 @@ section:nth-child(n+3) {
 
     &.responsibilities {
       color: $primary-color;
+    }
+  }
+}
+
+.margin-top-15{
+  margin-top:15px;
+}
+
+.line-height-2{
+  line-height: 2;
+}
+
+#project-modal {
+  h2 {
+    margin-bottom: 5px;
+  }
+
+  h3 {
+    font-size: 1.5em;
+  }
+
+  .bordered {
+    margin: 5px;
+
+    &:hover {
+      box-shadow: 0 0 15px black;
     }
   }
 }
@@ -158,6 +184,10 @@ section:nth-child(n+3) {
 
 .modal {
   .modal-header {
+    h1 {
+      color: white;
+    }
+
     background-color: $section-color;
     color: white;
     padding-left: 30px;
@@ -189,7 +219,8 @@ nav {
     }
 
     .white-nav {
-      color: $primary-color;
+      color: white;
+      text-shadow: 0 0 3px black;
     }
 
     img {

@@ -4,7 +4,68 @@
         <h1>Projects</h1>
     </div>
     <div class="modal-content">
-        project
+        <div class="tabs is-toggle">
+            <ul>
+                <li class="is-active" id="public-project-li">
+                    <a>
+                        <span class="icon is-small"><i class="fas fa-lock-open"></i></span>
+                        <span>Public Projects</span>
+                    </a>
+                </li>
+                <li id="private-project-li">
+                    <a>
+                        <span class="icon is-small"><i class="fas fa-lock"></i></span>
+                        <span>Private Projects</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div id="public-projects">
+            <div class="columns">
+                <div class="column bordered">
+                    <img src="../images/skills-background.jpg">
+                    <h3 class="has-text-centered">RPG UnNamed</h3>
+                    <p class="has-text-justified">This is a web based RPG platform which contains character sheet creation,
+                        dice rolling system and
+                        chat. The users are able to create an manage virtual game tables.</p>
+                    <p class="has-text-justified">It was developed as a college project with other 3 people.</p>
+                    <p class="line-height-2">Related skills: <span class="skill">PHP</span> <span class="skill">Javascript</span> <span
+                            class="skill">MySQL</span> <span class="skill">jQuery</span> <span
+                            class="skill">Bootstrap</span> <span class="skill">CSS/SCSS</span> <span
+                            class="skill">Git</span></p>
+                    <p style="color:red"><i class="fas fa-times"></i> Not responsive.</p>
+                    <div class="has-text-centered">
+                        <button class="button is-primary margin-top-15">Try it</button>
+                    </div>
+                </div>
+                <div class="column bordered">
+                    <img src="../images/skills-background.jpg">
+                    <h3 class="has-text-centered">Sample text</h3>
+                    <p>The quick brown fox jumped over the lazy dog.</p>
+                    <div class="has-text-centered">
+                        <button class="button is-primary">Try it</button>
+                    </div>
+                </div>
+                <div class="column bordered">
+                    <img src="../images/skills-background.jpg">
+                    <h3 class="has-text-centered">Sample text</h3>
+                    <p>The quick brown fox jumped over the lazy dog.</p>
+                    <div class="has-text-centered">
+                        <button class="button is-primary">Try it</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="private-projects" style="display: none;">
+            <div class="column bordered">
+                <img src="../images/skills-background.jpg">
+                <h3 class="has-text-centered">Sample text</h3>
+                <p>The quick brown fox jumped over the lazy dog.</p>
+                <div class="has-text-centered">
+                    <button class="button is-primary">Try it</button>
+                </div>
+            </div>
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
     </div>
-    <button class="modal-close is-large" aria-label="close"></button>
 </div>
