@@ -1,57 +1,128 @@
 <div class="modal animated fadeIn" id="project-modal">
     <div class="modal-background"></div>
     <div class="modal-header">
-        <h1>Projects</h1>
+        <div class="columns">
+            <div class="column">
+                <h1>Projects</h1>
+            </div>
+
+            <div class="column is-vertical-centered">
+                <div class="tabs is-toggle">
+                    <ul>
+                        <li class="is-active" id="public-project-li">
+                            <a>
+                                <span class="icon is-small"><i class="fas fa-lock-open"></i></span>
+                                <span>Public Projects</span>
+                            </a>
+                        </li>
+                        <li id="private-project-li">
+                            <a>
+                                <span class="icon is-small"><i class="fas fa-lock"></i></span>
+                                <span>Private Projects</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
     </div>
     <div class="modal-content">
-        <div class="tabs is-toggle">
-            <ul>
-                <li class="is-active" id="public-project-li">
-                    <a>
-                        <span class="icon is-small"><i class="fas fa-lock-open"></i></span>
-                        <span>Public Projects</span>
-                    </a>
-                </li>
-                <li id="private-project-li">
-                    <a>
-                        <span class="icon is-small"><i class="fas fa-lock"></i></span>
-                        <span>Private Projects</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
         <div id="public-projects">
             <div class="columns">
                 <div class="column bordered">
-                    <img src="../images/skills-background.jpg">
+                    <img src="../images/rpg_unnamed.png">
                     <h3 class="has-text-centered">RPG UnNamed</h3>
-                    <p class="has-text-justified">This is a web based RPG platform which contains character sheet creation,
+                    <p class="has-text-justified">This is a web based RPG platform which contains character sheet
+                        creation,
                         dice rolling system and
                         chat. The users are able to create an manage virtual game tables.</p>
                     <p class="has-text-justified">It was developed as a college project with other 3 people.</p>
-                    <p class="line-height-2">Related skills: <span class="skill">PHP</span> <span class="skill">Javascript</span> <span
-                            class="skill">MySQL</span> <span class="skill">jQuery</span> <span
-                            class="skill">Bootstrap</span> <span class="skill">CSS/SCSS</span> <span
-                            class="skill">Git</span></p>
+
+                    <p style="color:green"><i class="fas fa-check"></i> Database.</p>
                     <p style="color:red"><i class="fas fa-times"></i> Not responsive.</p>
+                    <p class="line-height-2">Related skills: <span class="skill">PHP</span> <span class="skill">Javascript</span>
+                        <span
+                                class="skill">MySQL</span> <span class="skill">jQuery</span> <span
+                                class="skill">Bootstrap</span> <span class="skill">CSS/SCSS</span> <span
+                                class="skill">Git</span></p>
                     <div class="has-text-centered">
-                        <button class="button is-primary margin-top-15">Try it</button>
+                        <a target="_blank" class="button is-primary margin-top-15" disabled="disabled">Try it</a>
+                        <a target="_blank" href="//github.com/Alkss/RPG_Unnamed"
+                           class="button is-success margin-top-15"><i
+                                class="fab fa-github"></i></a>
                     </div>
                 </div>
                 <div class="column bordered">
-                    <img src="../images/skills-background.jpg">
-                    <h3 class="has-text-centered">Sample text</h3>
-                    <p>The quick brown fox jumped over the lazy dog.</p>
+                    <img src="../images/shore.png">
+                    <h3 class="has-text-centered">Douglas Beauty BOOKING</h3>
+                    <p>Landing page for a German company containing one module that fetch information of a JSON file and
+                        a mailer one.</p>
+                    <p style="color:red"><i class="fas fa-times"></i> Database.</p>
+                    <p style="color:green"><i class="fas fa-check"></i> Responsive.</p>
+                    <p class="line-height-2">Related skills:
+                        <span class="skill">PHP</span>
+                        <span class="skill">Javascript</span>
+                        <span class="skill">jQuery</span>
+                        <span class="skill">Bulma</span>
+                        <span class="skill">CSS/SCSS</span>
+                        <span class="skill">Git</span>
                     <div class="has-text-centered">
-                        <button class="button is-primary">Try it</button>
+                        <a target="_blank" href="/shore" class="button is-primary margin-top-15">Try
+                            it</a>
+                        <a target="_blank" href="//github.com/Alkss/shore" class="button is-success margin-top-15"><i
+                                class="fab fa-github"></i></a>
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column bordered">
+                    <img src="../images/incloud.jpg">
+                    <h3 class="has-text-centered">Inclound application</h3>
+                    <p>A stop watch that can track the time with a description and store it in Database.</p>
+                    <p style="color:green"><i class="fas fa-check"></i> Database.</p>
+                    <p style="color:red"><i class="fas fa-times"></i> Not responsive.</p>
+                    <p class="line-height-2">Related skills:
+                        <span class="skill">PHP</span>
+                        <span class="skill">Javascript</span>
+                        <span class="skill">MySQL</span>
+                        <span class="skill">jQuery</span>
+                        <span class="skill">Bootstrap</span>
+                        <span class="skill">CSS/SCSS</span>
+                        <span class="skill">Git</span>
+                    </p>
+                    <div class="has-text-centered">
+                        <a target="_blank" href="/incloud/" class="button is-primary margin-top-15">Try it</a>
+                        <a target="_blank" href="//github.com/Alkss/incloud"
+                           class="button is-success margin-top-15"><i
+                                class="fab fa-github"></i></a>
                     </div>
                 </div>
                 <div class="column bordered">
-                    <img src="../images/skills-background.jpg">
-                    <h3 class="has-text-centered">Sample text</h3>
-                    <p>The quick brown fox jumped over the lazy dog.</p>
+                    <img src="../images/ydigitalmedia.png">
+                    <h3 class="has-text-centered">YDigital Media application</h3>
+                    <p>Custom pagination implementation where you can define the number the pages to be shown with 4
+                        variables: <b>Total pages</b>, <b>Current Page</b>,
+                        <b>Boundaries</b>
+                        and
+                        <b>Around</b>.
+                    </p>
+                    <p style="color:red"><i class="fas fa-times"></i> Database.</p>
+                    <p style="color:green"><i class="fas fa-check"></i> Responsive.</p>
+                    <p class="line-height-2">Related skills:
+                        <span class="skill">PHP</span>
+                        <span class="skill">Javascript</span>
+                        <span class="skill">jQuery</span>
+                        <span class="skill">Bulma</span>
+                        <span class="skill">CSS/SCSS</span>
+                        <span class="skill">Git</span>
                     <div class="has-text-centered">
-                        <button class="button is-primary">Try it</button>
+                        <a target="_blank" href="/ydigital/" class="button is-primary margin-top-15">Try it</a>
+                        <a target="_blank" href="//github.com/Alkss/YDigital---Pagination"
+                           class="button is-success margin-top-15"><i
+                                class="fab fa-github"></i></a>
                     </div>
                 </div>
             </div>

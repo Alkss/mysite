@@ -1,0 +1,75 @@
+<div class="col-lg-12 text-center">
+    <h1><span class="hours">00</span>:<span class="minutes">00</span>:<span class="seconds">00</span></h1>
+</div>
+<div class="col-lg-12 text-center">
+    <button type="button" id="startBtn" name="startBtn" class="btn btn-primary">Play</button>
+    <button type="button" id="pauseBtn" name="pauseBtn" class="btn btn-secondary" style="display: none">Pause</button>
+    <button type="button" id="stopBtn" name="stopBtn" class="btn btn-danger">Stop</button>
+    <button type="button" id="currentTimeModalBtn" class="btn btn-success" data-toggle="modal"
+            data-target="#currentTimeModal">
+        Book Current Time
+    </button>
+</div>
+<div class="col-lg-12 text-center">
+    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#manualTimeModal">Book time without
+        tracker
+    </button>
+</div>
+<div class="col-lg-12" id="savedTracks">
+</div>
+
+
+<!-- Modal for current time-->
+<div class="modal fade" id="currentTimeModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="currentTimeTitle">Current Time Book</h4>
+            </div>
+            <div class="modal-body">
+                <div class="text-center text-large">
+                    <p>Time (<span id="currentStopWatchModal"></span>)</p>
+                    <p><textarea id="currentTimeDesc" name="currentTimeDesc" class="form-control" required="required"
+                                 style="height:10em;" placeholder="Description..."></textarea>
+                    </p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" id="bookCurrentTimer" data-dismiss="modal" class="btn btn-primary">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for manual time-->
+<div class="modal fade" id="manualTimeModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="manualTimeTitle">Manual Book</h4>
+            </div>
+            <div class="modal-body">
+                <label for="manualInputTrack">Input Time (HH:MM:SS)</label>
+                <input id="manualInputTrack" name="manualInputTrack" type="time" step='1' min="00:00:00"
+                       class="form-control">
+                <textarea id="manualTimeDesc" name="manualTimeDesc" class="form-control" required="required"
+                          style="height:10em;" placeholder="Description..."></textarea>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" id="bookManualTimer" data-dismiss="modal" class="btn btn-primary">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/incloud/control/js/stopwatch.js"></script>
